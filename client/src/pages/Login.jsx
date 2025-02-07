@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import axios from "axios";
-import { AuthContext } from "../redux/AuthContext";
+import { AuthContext } from "../Context/AuthContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import apiRequest from "../lib/apiRequest";
