@@ -2,6 +2,7 @@ import { Suspense, useState } from 'react'
 import { AuthContextProvider } from './context/AuthContext'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { lazy} from "react";
+
 // import AOS from "aos";
 // import "aos/dist/aos.css";
 
@@ -17,8 +18,9 @@ const Dashboard = lazy(() => import('./pages/Dashboard'))
 const EnergyInputForm  = lazy(() => import('./components/EnergyInputForm'))
 const VirtualAuditQuestionnaire   = lazy(() => import('./components/VirtualAuditQuestionnaire'))
 const AuditResults   = lazy(() => import('./pages/AuditResults'))
- 
-
+const Pricing   = lazy(() => import('./pages/Pricing')) 
+const About   = lazy(() => import('./pages/About'));
+const Services   = lazy(() => import('./pages/Services'));
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,12 +37,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/userdash" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/energy-input" element={<EnergyInputForm />} /> 
           <Route path="/virtual-audit" element={<VirtualAuditQuestionnaire />} /> 
           <Route path="/audit-results/:id" element={<AuditResults />} /> 
           <Route path="/pricing" element={<Pricing/>} />
           <Route path="/about" element={<About/>} />
+          <Route path='/services' element={<Services />} />
+
         </Routes>
         </ErrorBoundary>
       </Suspense>

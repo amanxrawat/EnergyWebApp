@@ -17,11 +17,11 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-white">
+    <div className="bg-white z-[1]">
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
+        <nav aria-label="Global" className="flex items-center justify-center p-6 lg:px-8 border-b-2 pb-8">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5 flex gap-2 items-center justify-center">
+            <a href="#" className="-m-1.5 p-1.5 flex gap-2 items-center justify-center z-[1]">
               <img
                 alt=""
                 src={logo}
@@ -40,30 +40,33 @@ export default function Example() {
               <FaBars aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+          <div className="hidden lg:flex lg:gap-x-12  ">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
+              <a key={item.name} href={item.href} className="text-lg  font-bold text-gray-900">
                 {item.name}
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-6 justify-center items-center">
-          <a
-                href="#"
-                className="rounded-md bg-gradient-to-r from-green-400 to-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:scale-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 "
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-6 justify-center items-center mr-6">
+          {/* <a
+                href="/signup"
+                className="rounded-md bg-gradient-to-r from-green-400 to-blue-500 px-3.5 py-2.5 text-sm font-semibold z-[-1] text-white shadow-xs hover:scale-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 "
                 >
                 Register
-              </a>
-            <a href="#" className="text-sm/4 font-semibold text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+                </a> */}
+                <a href="/signup" className="text-lg font-bold text-gray-900 hover:text-blue-900 ">
+                  Register <span aria-hidden="true"></span>
+                </a>
+                <a href="/login" className="text-lg font-bold text-gray-900 hover:text-blue-900">
+                  Log in <span aria-hidden="true">&rarr;</span>
+                </a>
           </div>
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="#" className="m-1.5 p-1.5">
                 <span className="sr-only">Eco-Watt</span>
                 <img
                   alt=""
@@ -95,7 +98,7 @@ export default function Example() {
                 </div>
                 <div className="py-6">
                   <a
-                    href="#"
+                    href="/login"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Log in
@@ -141,12 +144,12 @@ export default function Example() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="/about"
                 className="rounded-md bg-gradient-to-r from-green-400 to-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:scale-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 "
                 >
                 Get started
               </a>
-              <a href="#" className="text-sm/6 font-semibold text-gray-900">
+              <a href="/services" className="text-sm/6 font-semibold text-gray-900">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>

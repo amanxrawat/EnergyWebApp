@@ -3,12 +3,15 @@ import { FaUsers, FaRegBuilding, FaUsersCog, FaLeaf, FaBolt, FaHandsHelping } fr
 import Footer from "../components/Footer";  
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import { Link } from "react-router-dom";
+import PageLoad1 from "../constants/PageLoad1";
 
 const Home = () => {
   return (
     <>
     {/* <Navbar/> */}
-    <div className="bg-gray-100 text-gray-900">
+    <PageLoad1/>
+    <div className="bg-gray-100 text-gray-900 z-[-1]">
       
       {/* Hero Section */}
         <Hero/>
