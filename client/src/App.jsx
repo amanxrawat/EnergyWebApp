@@ -21,6 +21,8 @@ const AuditResults   = lazy(() => import('./pages/AuditResults'))
 const Pricing   = lazy(() => import('./pages/Pricing')) 
 const About   = lazy(() => import('./pages/About'));
 const Services   = lazy(() => import('./pages/Services'));
+const Contact   = lazy(() => import('./pages/Contact'));
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -44,6 +46,7 @@ function App() {
           <Route path="/pricing" element={<Pricing/>} />
           <Route path="/about" element={<About/>} />
           <Route path='/services' element={<Services />} />
+          <Route path='/contact' element={<Contact />} />
 
         </Routes>
         </ErrorBoundary>
