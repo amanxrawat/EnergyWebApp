@@ -2,14 +2,17 @@ import React from "react";
 import { FaUsers, FaRegBuilding, FaUsersCog, FaLeaf, FaBolt, FaHandsHelping } from "react-icons/fa";
 import Footer from "../components/Footer";  
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
 
 const Home = () => {
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
     <div className="bg-gray-100 text-gray-900">
       
       {/* Hero Section */}
+        <Hero/>
+
       <header className="text-center py-20 bg-gradient-to-r from-green-400 to-blue-500 text-white">
         <h2 className="text-4xl font-bold">Empowering a Sustainable Future with <span className="text-green-900">EcoWatt</span></h2>
         <p className="mt-3">Discover innovative ways to optimize energy consumption and reduce waste.</p>
@@ -35,28 +38,22 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-10 mt-10">
           <div className="p-5 bg-gray-100 rounded-lg text-center shadow-md">
             <FaUsers className="text-green-500 text-4xl mx-auto" />
-            <h4 className="text-xl font-bold mt-3">Membership Organizations</h4>
+            <h4 className="text-xl font-bold mt-3">Societies and Domestic Households</h4>
+            <h6 className="pt-1 text-center"> EcoWatt empowers residential societies with smart energy management solutions. Our platform helps track energy consumption, optimize usage, and implement sustainable practices to reduce costs and carbon footprints. By integrating renewable energy sources and promoting efficiency, we enable communities to embrace a greener lifestyle while lowering electricity bills.
+
+</h6>
           </div>
           <div className="p-5 bg-gray-100 rounded-lg text-center shadow-md">
             <FaRegBuilding className="text-green-500 text-4xl mx-auto" />
-            <h4 className="text-xl font-bold mt-3">National Associations</h4>
+            <h4 className="text-xl font-bold mt-3">Industries anf Factories</h4>
+            <h6 className=" pt-1" >EcoWatt provides industries and factories with advanced energy auditing and optimization solutions. Our platform helps businesses monitor large-scale energy consumption, detect inefficiencies, and implement cost-saving strategies. By integrating smart analytics and sustainable practices, industries can enhance productivity, reduce operational costs, and minimize their carbon footprint, contributing to a greener future.</h6>
           </div>
           <div className="p-5 bg-gray-100 rounded-lg text-center shadow-md">
             <FaUsersCog className="text-green-500 text-4xl mx-auto" />
             <h4 className="text-xl font-bold mt-3">Clubs and Groups</h4>
+            <h1 className="pt-1">EcoWatt supports clubs and groups in adopting energy-efficient practices to reduce their environmental impact. Whether it's a recreational club, sports facility, or community organization, our platform provides insights into energy consumption, promotes sustainability, and helps optimize resource usage. By implementing smart energy solutions, clubs can lower costs and contribute to a cleaner, greener future.</h1>
           </div>
-          <div className="p-5 bg-gray-100 rounded-lg text-center shadow-md">
-            <FaUsersCog className="text-green-500 text-4xl mx-auto" />
-            <h4 className="text-xl font-bold mt-3">Societies and Domestic Households</h4>
-          </div>
-          <div className="p-5 bg-gray-100 rounded-lg text-center shadow-md">
-            <FaUsersCog className="text-green-500 text-4xl mx-auto" />
-            <h4 className="text-xl font-bold mt-3">Industries anf Factories</h4>
-          </div>
-          <div className="p-5 bg-gray-100 rounded-lg text-center shadow-md">
-            <FaUsersCog className="text-green-500 text-4xl mx-auto" />
-            <h4 className="text-xl font-bold mt-3">Community</h4>
-          </div>
+          
         </div>
       </section>
       
